@@ -10,7 +10,11 @@ const defaultFormFields={
     password: '',
     confirmPassword: '',
 }
+
+
 function SignUpForm() {
+
+
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {displayName, email, password, confirmPassword} = formFields;
     const resetForm=()=>{
@@ -26,6 +30,7 @@ function SignUpForm() {
         try{
                  const {user} = await createAuthUserWithEmailAndPassword(email, password);
                 user.displayName = displayName;
+
        await createUserDatabaseFromAuth(user);
        resetForm();
         }catch(error){
