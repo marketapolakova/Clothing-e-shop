@@ -5,6 +5,7 @@ import './navigation.scss'
 import {ReactComponent as Logo} from '../../assets/crown.svg'
 import {signOutUser} from '../../units/firebase/firebase.units'
 
+
 function Navigation() {
     const {currentUser} = useContext(UserContext);
     const signOutHandler = async() => {
