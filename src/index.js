@@ -7,13 +7,16 @@ import { ProductProvider } from './contexts/products.context';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { CartDropdownProvider } from './contexts/cart-dropdown.context'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
         <ProductProvider>
+          <CartDropdownProvider>
     <App />
+     </CartDropdownProvider>
         </ProductProvider>
       </UserProvider>
     </BrowserRouter>
