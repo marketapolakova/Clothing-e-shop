@@ -1,27 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { UserProvider } from './contexts/user.context';
-import { ProductProvider } from './contexts/products.context';
-import { BrowserRouter } from 'react-router-dom';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
-import { CartDropdownProvider } from './contexts/cart-dropdown.context'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { UserProvider } from "./contexts/user.context";
+import { ProductProvider } from "./contexts/products.context";
+import { BrowserRouter } from "react-router-dom";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
+import { ShoppingCartProvider } from "./contexts/shopping-cart.context";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
         <ProductProvider>
-          <CartDropdownProvider>
-    <App />
-     </CartDropdownProvider>
+          <ShoppingCartProvider>
+            <App />
+          </ShoppingCartProvider>
         </ProductProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -5,6 +5,7 @@ import Navigation from './pages/navigation/navigation.component';
 import Homepage from './pages/homepage-component/homepage.component';
 import SignIn from './pages/authentication/authentication';
 import Shop from './pages/shop/shop.component';
+import CartPage from './pages/cartPage/cartPage.component';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="shop" element={<Shop/>} />
           <Route path="auth" element={<SignIn/>} />
+          <Route path="cart" element={<CartPage/>} />
         </Route>
       </Routes>
     </div>
